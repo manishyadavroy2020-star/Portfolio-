@@ -3,8 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="description" content="Manish Yadav — Professional Web Designer. Premium websites starting from ₹4,999.">
-<title>Manish Yadav — Premium Websites. Real Results.</title>
+<meta name="description" content="Manish Yadav — Professional Web Designer in Durgapur. Websites from ₹2,999. Free logo design included. Delivered in 3-7 days. 50+ happy clients across India.">
+<title>Manish Yadav — Web Designer | Websites from ₹2,999 | Durgapur</title>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Manish Yadav">
+<meta name="keywords" content="web designer durgapur, website design india, affordable website, manish yadav, website from 2999, cheap website design, business website, web developer west bengal, logo design free, professional website">
+<meta property="og:title" content="Manish Yadav — Web Designer | Websites from ₹2,999">
+<meta property="og:description" content="Professional websites from ₹2,999 with free logo design. Fast delivery in 3-7 days. 50+ happy clients across India.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manish Yadav — Web Designer | From ₹2,999">
+<meta name="twitter:description" content="Professional websites from ₹2,999. Free logo design. Fast delivery.">
+<link rel="canonical" href="https://manishyadav.pages.dev">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Manish Yadav Web Design","description":"Professional web designer offering websites from ₹2,999 with free logo design","url":"https://manishyadav.pages.dev","telephone":"+918389981668","email":"manishyadavroy201010@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Durgapur","addressRegion":"West Bengal","addressCountry":"IN"},"priceRange":"₹2,999 - ₹7,999","serviceType":"Web Design","sameAs":["https://www.instagram.com/codecanvasagency20/"]}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--black:#0a0a0a;--dark:#111;--dark2:#1a1a1a;--dark3:#222;--blue:#2563eb;--blue2:#1d4ed8;--cyan:#06b6d4;--gold:#d4af37;--white:#f8f9fa;--gray:#9ca3af;--light:#e5e7eb;}
@@ -99,6 +113,21 @@ section{padding:5rem 1.5rem;}
 .svc-price{font-size:0.68rem;color:var(--blue);font-weight:600;}
 
 /* PRICING */
+/* LIMITED TIME OFFER BANNER */
+.lto-banner{background:linear-gradient(135deg,#dc2626,#b91c1c);padding:1.2rem 1.5rem;text-align:center;position:relative;overflow:hidden;margin-bottom:0;}
+.lto-banner::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(255,255,255,0.03) 10px,rgba(255,255,255,0.03) 20px);}
+.lto-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.8rem;}
+.lto-badge{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:white;font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:50px;animation:blink-badge 1.5s infinite;}
+@keyframes blink-badge{0%,100%{opacity:1}50%{opacity:0.6}}
+.lto-text{font-family:"Syne",sans-serif;font-size:clamp(0.85rem,2.5vw,1.1rem);font-weight:700;color:white;}
+.lto-text .old{text-decoration:line-through;opacity:0.6;font-size:0.85em;}
+.lto-text .new{color:#fde68a;}
+.lto-timer{font-size:0.72rem;color:rgba(255,255,255,0.8);letter-spacing:0.1em;}
+
+/* STRIKETHROUGH PRICES */
+.pcard-old{font-size:0.85rem;color:var(--gray);text-decoration:line-through;margin-bottom:0.2rem;display:block;}
+.pcard-savings{display:inline-block;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);color:#4ade80;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;padding:0.2rem 0.6rem;border-radius:50px;margin-bottom:0.5rem;}
+
 #pricing{background:var(--black);}
 .price-header{text-align:center;margin-bottom:2rem;}
 .price-note{text-align:center;margin-bottom:2.5rem;font-size:0.82rem;color:var(--gray);}
@@ -308,7 +337,7 @@ section{padding:5rem 1.5rem;}
       <span class="t1">We Build Websites</span>
       <span class="t2">That Get You Customers</span>
     </h1>
-    <p class="hero-sub">Starting from just <strong>₹4,999</strong> — Professional, Fast & 100% Mobile Friendly.<br>🎨 Free Logo Design with Every Package!</p>
+    <p class="hero-sub">Starting from just <strong>₹2,999</strong> — Professional, Fast & 100% Mobile Friendly.<br>🎨 Free Logo Design with Every Package!</p>
     <div class="hero-btns">
       <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20need%20a%20website%20for%20my%20business." target="_blank" class="btn-blue">💬 Get Your Website</a>
       <a href="#portfolio" class="btn-ghost">View Our Work →</a>
@@ -330,18 +359,18 @@ section{padding:5rem 1.5rem;}
       <p class="sec-sub" style="max-width:500px;margin:0 auto;">Whatever your business — I build professional websites that attract customers and grow your brand.</p>
     </div>
     <div class="svc-grid" style="margin-top:2.5rem;">
-      <div class="svc-card fadein"><span class="svc-emoji">🍕</span><div class="svc-name">Restaurant & Food</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">💇</span><div class="svc-name">Salon & Beauty</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🏋️</span><div class="svc-name">Gym & Fitness</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">📸</span><div class="svc-name">Photography</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🎓</span><div class="svc-name">Coaching Classes</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🏥</span><div class="svc-name">Clinic & Doctor</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🏠</span><div class="svc-name">Real Estate</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🎂</span><div class="svc-name">Bakery & Cakes</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🛍️</span><div class="svc-name">Local Business</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">💼</span><div class="svc-name">Personal Portfolio</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🚗</span><div class="svc-name">Car Service</div><div class="svc-price">From ₹4,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🎪</span><div class="svc-name">Event Management</div><div class="svc-price">From ₹4,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🍕</span><div class="svc-name">Restaurant & Food</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">💇</span><div class="svc-name">Salon & Beauty</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🏋️</span><div class="svc-name">Gym & Fitness</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">📸</span><div class="svc-name">Photography</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🎓</span><div class="svc-name">Coaching Classes</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🏥</span><div class="svc-name">Clinic & Doctor</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🏠</span><div class="svc-name">Real Estate</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🎂</span><div class="svc-name">Bakery & Cakes</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🛍️</span><div class="svc-name">Local Business</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">💼</span><div class="svc-name">Personal Portfolio</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🚗</span><div class="svc-name">Car Service</div><div class="svc-price">From ₹2,999</div></div>
+      <div class="svc-card fadein"><span class="svc-emoji">🎪</span><div class="svc-name">Event Management</div><div class="svc-price">From ₹2,999</div></div>
     </div>
   </div>
 </section>
@@ -349,15 +378,26 @@ section{padding:5rem 1.5rem;}
 <!-- PRICING -->
 <section id="pricing">
   <div class="container">
-    <div class="price-header fadein">
-      <p class="sec-eye">Simple Pricing</p>
-      <h2 class="sec-title">Transparent <span>Packages</span></h2>
+    <!-- LIMITED TIME OFFER BANNER -->
+    <div class="lto-banner fadein">
+      <div class="lto-inner">
+        <span class="lto-badge">🔥 Limited Time Offer</span>
+        <span class="lto-text">Prices Slashed! Was <span class="old">₹4,999</span> — Now just <span class="new">₹2,999</span> onwards!</span>
+        <span class="lto-timer">⏰ Offer valid for limited time only</span>
+      </div>
     </div>
-    <p class="price-note fadein">🎨 <strong>Free Logo Design</strong> with every package &nbsp;•&nbsp; 🔧 Yearly maintenance from <strong>₹2,999/year</strong></p>
+    <div class="price-header fadein" style="margin-top:2.5rem;">
+      <p class="sec-eye">Limited Time Pricing</p>
+      <h2 class="sec-title">Unbeatable <span>Packages</span></h2>
+      <p style="color:var(--gray);font-size:0.88rem;margin-top:0.5rem;">Grab these prices before they go back up! 🚀</p>
+    </div>
+    <p class="price-note fadein">🎨 <strong>Free Logo Design</strong> with every package &nbsp;•&nbsp; 🔧 Yearly maintenance from <strong>₹1,999/year</strong></p>
     <div class="price-grid">
       <div class="pcard fadein">
         <div class="pcard-name">Basic</div>
-        <div class="pcard-price">₹4,999<span>/one time</span></div>
+        <span class="pcard-old">Was ₹4,999</span>
+        <span class="pcard-savings">You Save ₹2,000 🎉</span>
+        <div class="pcard-price">₹2,999<span>/one time</span></div>
         <div class="pcard-delivery">⚡ Delivered in 3 Days</div>
         <ul class="pcard-features">
           <li>3-4 Page Website</li>
@@ -366,12 +406,14 @@ section{padding:5rem 1.5rem;}
           <li>Contact Form</li>
           <li>Free Logo Design</li>
         </ul>
-        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Basic%20package%20₹4999." target="_blank" class="pcard-btn">Get Started →</a>
+        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Basic%20package%20at%20the%20offer%20price%20₹2999!" target="_blank" class="pcard-btn">Get Started →</a>
       </div>
       <div class="pcard pop fadein">
         <div class="pop-tag">⭐ Most Popular</div>
         <div class="pcard-name">Standard</div>
-        <div class="pcard-price">₹7,999<span>/one time</span></div>
+        <span class="pcard-old">Was ₹7,999</span>
+        <span class="pcard-savings">You Save ₹3,000 🎉</span>
+        <div class="pcard-price">₹4,999<span>/one time</span></div>
         <div class="pcard-delivery">⚡ Delivered in 5 Days</div>
         <ul class="pcard-features">
           <li>5-6 Page Website</li>
@@ -383,11 +425,13 @@ section{padding:5rem 1.5rem;}
           <li>Free Logo Design</li>
           <li>Mobile Responsive</li>
         </ul>
-        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Standard%20package%20₹7999." target="_blank" class="pcard-btn">Get Started →</a>
+        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Standard%20package%20at%20the%20offer%20price%20₹4999!" target="_blank" class="pcard-btn">Get Started →</a>
       </div>
       <div class="pcard fadein">
         <div class="pcard-name">Premium</div>
-        <div class="pcard-price">₹12,999<span>/one time</span></div>
+        <span class="pcard-old">Was ₹12,999</span>
+        <span class="pcard-savings">You Save ₹5,000 🎉</span>
+        <div class="pcard-price">₹7,999<span>/one time</span></div>
         <div class="pcard-delivery">⚡ Delivered in 7 Days</div>
         <ul class="pcard-features">
           <li>Full Custom Website</li>
@@ -400,7 +444,7 @@ section{padding:5rem 1.5rem;}
           <li>Speed Optimized</li>
           <li>Priority Support</li>
         </ul>
-        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Premium%20package%20₹12999." target="_blank" class="pcard-btn">Get Started →</a>
+        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Premium%20package%20at%20the%20offer%20price%20₹7999!" target="_blank" class="pcard-btn">Get Started →</a>
       </div>
     </div>
     <!-- OFFER NOTE -->
@@ -491,7 +535,7 @@ section{padding:5rem 1.5rem;}
       <h2 class="sec-title">Common <span>Questions</span></h2>
     </div>
     <div class="faq-list fadein">
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How long does it take to build my website?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>Basic websites are delivered in 3 days, Standard in 5 days and Premium in 7 days. Once you share your business details, I get started immediately.</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How long does it take to build my website?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>Basic websites (₹2,999) are delivered in 3 days, Standard (₹4,999) in 5 days and Premium (₹7,999) in 7 days. Once you share your business details, I get started immediately.</p></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What if I don't have a logo?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>No problem! Free logo design is included with every package. Just tell me your business name — I'll design a professional logo at zero extra cost.</p></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Will my website work on mobile phones?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>Absolutely! Every website I build is 100% mobile responsive and tested on all screen sizes. Mobile optimization is my top priority.</p></div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Can I update my website later?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>Yes! Small updates like changing phone numbers or prices are done free. I'm always available on WhatsApp — just message me anytime.</p></div></div>
@@ -726,7 +770,7 @@ function renderAdminList(){
   var l=document.getElementById('adminList');
   if(!ps.length){l.innerHTML='<p style="font-size:0.75rem;color:var(--gray);">No projects yet.</p>';return;}
   l.innerHTML='<p style="font-size:0.7rem;color:var(--gray);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.1em;">Existing Projects</p>'+
-    ps.map(function(p){return '<div class="aproject"><span>'+p.name+' — <em style="color:var(--blue)">'+p.cat+'</em></span><button class="adel" onclick="delProject('+p.id+');renderAdminList()">Remove</button></div>';}).join('');
+    ps.map(function(p){return '<div class="aproject"><span>'+p.name+' ('+p.cat+')</span><button class="adel" onclick="delProject('+p.id+')">Delete</button></div>';}).join('');
 }
 renderPortfolio();
 </script>
