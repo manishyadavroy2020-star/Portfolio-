@@ -1,778 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lenis lenis-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="description" content="Manish Yadav — Professional Web Designer in Durgapur. Websites from ₹2,999. Free logo design included. Delivered in 3-7 days. 50+ happy clients across India.">
-<title>Manish Yadav — Web Designer | Websites from ₹2,999 | Durgapur</title>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-<meta name="author" content="Manish Yadav">
-<meta name="keywords" content="web designer durgapur, website design india, affordable website, manish yadav, website from 2999, cheap website design, business website, web developer west bengal, logo design free, professional website">
-<meta property="og:title" content="Manish Yadav — Web Designer | Websites from ₹2,999">
-<meta property="og:description" content="Professional websites from ₹2,999 with free logo design. Fast delivery in 3-7 days. 50+ happy clients across India.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_IN">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Manish Yadav — Web Designer | From ₹2,999">
-<meta name="twitter:description" content="Professional websites from ₹2,999. Free logo design. Fast delivery.">
-<link rel="canonical" href="https://manishyadav.pages.dev">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Manish Yadav Web Design","description":"Professional web designer offering websites from ₹2,999 with free logo design","url":"https://manishyadav.pages.dev","telephone":"+918389981668","email":"manishyadavroy201010@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Durgapur","addressRegion":"West Bengal","addressCountry":"IN"},"priceRange":"₹2,999 - ₹7,999","serviceType":"Web Design","sameAs":["https://www.instagram.com/codecanvasagency20/"]}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--black:#0a0a0a;--dark:#111;--dark2:#1a1a1a;--dark3:#222;--blue:#2563eb;--blue2:#1d4ed8;--cyan:#06b6d4;--gold:#d4af37;--white:#f8f9fa;--gray:#9ca3af;--light:#e5e7eb;}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
-
-/* OFFER BAR */
-#offerBar{position:fixed;top:0;left:0;right:0;z-index:10001;background:linear-gradient(90deg,#1d4ed8,#06b6d4,#1d4ed8);background-size:200%;animation:offerMove 4s linear infinite;padding:0.5rem 1rem;display:flex;align-items:center;justify-content:center;gap:0.8rem;flex-wrap:wrap;}
-@keyframes offerMove{0%{background-position:0%}100%{background-position:200%}}
-.offer-text{font-size:0.72rem;font-weight:600;color:white;text-align:center;}
-.offer-btn{background:white;color:var(--blue);padding:0.2rem 0.8rem;font-size:0.7rem;font-weight:700;text-decoration:none;border-radius:50px;white-space:nowrap;flex-shrink:0;}
-.offer-close{background:none;border:none;color:rgba(255,255,255,0.7);cursor:pointer;font-size:1rem;flex-shrink:0;}
-
-/* LOADER */
-#loader{position:fixed;inset:0;background:var(--black);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-#loader.gone{display:none;}
-.loader-name{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,6vw,3rem);font-weight:800;color:var(--white);}
-.loader-name span{color:var(--blue);}
-.loader-sub{font-size:0.72rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray);margin-top:0.5rem;}
-.loader-bar{width:180px;height:2px;background:var(--dark3);margin-top:2rem;border-radius:2px;overflow:hidden;}
-.loader-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));animation:lfill 2s ease forwards;}
-@keyframes lfill{from{width:0}to{width:100%}}
-
-/* NAVBAR */
-#navbar{position:fixed;top:35px;width:100%;z-index:1000;padding:0.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.05);}
-#navbar.scrolled{border-bottom:1px solid rgba(37,99,235,0.2);}
-#navbar.hidden{transform:translateY(-100%);}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(0.9rem,2.5vw,1.2rem);color:var(--white);text-decoration:none;}
-.nav-logo span{color:var(--blue);}
-.nav-links{display:flex;gap:1.5rem;list-style:none;}
-.nav-links a{color:var(--gray);text-decoration:none;font-size:0.8rem;font-weight:500;transition:color 0.3s;}
-.nav-links a:hover{color:var(--white);}
-.nav-wa{background:var(--blue);color:var(--white);padding:0.5rem 1.2rem;font-size:0.8rem;font-weight:600;text-decoration:none;border-radius:4px;white-space:nowrap;}
-.nav-wa:hover{background:var(--blue2);}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--white);}
-@media(max-width:768px){.nav-links{display:none;}.hamburger{display:flex;}}
-
-/* MOBILE MENU */
-#mobileMenu{position:fixed;inset:0;background:rgba(10,10,10,0.99);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transform:translateX(100%);transition:transform 0.4s;}
-#mobileMenu.open{transform:translateX(0);}
-#mobileMenu a{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);text-decoration:none;}
-#mobileMenu a:hover{color:var(--blue);}
-#mobileClose{position:absolute;top:1.2rem;right:1.2rem;background:none;border:none;color:var(--white);font-size:1.8rem;cursor:pointer;}
-
-/* HERO */
-#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:80px;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(37,99,235,0.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(6,182,212,0.1) 0%,transparent 50%),url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1600&q=60') center/cover no-repeat;opacity:0.4;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0.7) 0%,rgba(10,10,10,0.5) 50%,rgba(10,10,10,0.9) 100%);}
-#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
-.hero-content{position:relative;z-index:2;text-align:center;padding:2rem 1.2rem;max-width:900px;}
-.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.4);color:var(--cyan);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 1rem;margin-bottom:1.8rem;border-radius:50px;}
-.hero-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,7vw,5rem);font-weight:800;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.2rem;}
-.hero-title .t1{display:block;color:var(--white);}
-.hero-title .t2{display:block;color:var(--blue);}
-.hero-sub{font-size:clamp(0.88rem,2vw,1.05rem);color:var(--gray);margin-bottom:2.5rem;line-height:1.7;}
-.hero-sub strong{color:var(--gold);}
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;}
-.btn-blue{background:var(--blue);color:var(--white);padding:0.9rem 2rem;font-weight:600;font-size:0.88rem;text-decoration:none;border-radius:4px;transition:all 0.3s;display:inline-flex;align-items:center;gap:0.5rem;}
-.btn-blue:hover{background:var(--blue2);transform:translateY(-2px);}
-.btn-ghost{border:1px solid rgba(255,255,255,0.2);color:var(--white);padding:0.9rem 2rem;font-weight:600;font-size:0.88rem;text-decoration:none;border-radius:4px;transition:all 0.3s;}
-.btn-ghost:hover{border-color:var(--blue);color:var(--blue);}
-.hero-stats{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;}
-.hstat-num{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--white);}
-.hstat-num span{color:var(--blue);}
-.hstat-label{font-size:0.68rem;color:var(--gray);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem;}
-
-/* SECTIONS - NO REVEAL OPACITY ISSUES */
-section{padding:5rem 1.5rem;}
-.container{max-width:1200px;margin:0 auto;}
-.sec-eye{font-size:0.68rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--blue);margin-bottom:0.6rem;font-weight:600;}
-.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1rem;}
-.sec-title span{color:var(--blue);}
-.sec-sub{color:var(--gray);font-size:0.88rem;line-height:1.8;}
-.blue-line{width:40px;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan));margin:1rem 0 1.5rem;border-radius:2px;}
-
-/* FADE IN ANIMATION - SAFE VERSION */
-.fadein{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
-.fadein.show{opacity:1;transform:translateY(0);}
-
-/* SERVICES */
-#services{background:var(--dark);}
-.svc-header{text-align:center;margin-bottom:2.5rem;}
-.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.8rem;}
-@media(min-width:480px){.svc-grid{grid-template-columns:repeat(3,1fr);}}
-@media(min-width:900px){.svc-grid{grid-template-columns:repeat(4,1fr);gap:1rem;}}
-.svc-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.06);padding:1.2rem;transition:all 0.3s;}
-.svc-card:hover{border-color:rgba(37,99,235,0.4);transform:translateY(-3px);}
-.svc-emoji{font-size:1.8rem;margin-bottom:0.6rem;display:block;}
-.svc-name{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;}
-.svc-price{font-size:0.68rem;color:var(--blue);font-weight:600;}
-
-/* PRICING */
-/* LIMITED TIME OFFER BANNER */
-.lto-banner{background:linear-gradient(135deg,#dc2626,#b91c1c);padding:1.2rem 1.5rem;text-align:center;position:relative;overflow:hidden;margin-bottom:0;}
-.lto-banner::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(255,255,255,0.03) 10px,rgba(255,255,255,0.03) 20px);}
-.lto-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0.8rem;}
-.lto-badge{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:white;font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:50px;animation:blink-badge 1.5s infinite;}
-@keyframes blink-badge{0%,100%{opacity:1}50%{opacity:0.6}}
-.lto-text{font-family:"Syne",sans-serif;font-size:clamp(0.85rem,2.5vw,1.1rem);font-weight:700;color:white;}
-.lto-text .old{text-decoration:line-through;opacity:0.6;font-size:0.85em;}
-.lto-text .new{color:#fde68a;}
-.lto-timer{font-size:0.72rem;color:rgba(255,255,255,0.8);letter-spacing:0.1em;}
-
-/* STRIKETHROUGH PRICES */
-.pcard-old{font-size:0.85rem;color:var(--gray);text-decoration:line-through;margin-bottom:0.2rem;display:block;}
-.pcard-savings{display:inline-block;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);color:#4ade80;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;padding:0.2rem 0.6rem;border-radius:50px;margin-bottom:0.5rem;}
-
-#pricing{background:var(--black);}
-.price-header{text-align:center;margin-bottom:2rem;}
-.price-note{text-align:center;margin-bottom:2.5rem;font-size:0.82rem;color:var(--gray);}
-.price-note strong{color:var(--gold);}
-.price-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:950px;margin:0 auto;}
-@media(min-width:640px){.price-grid{grid-template-columns:repeat(3,1fr);}}
-.pcard{background:var(--dark);border:1px solid rgba(255,255,255,0.07);padding:2rem 1.5rem;position:relative;transition:all 0.3s;}
-.pcard:hover{border-color:rgba(37,99,235,0.4);transform:translateY(-5px);}
-.pcard.pop{border-color:var(--blue);background:linear-gradient(135deg,rgba(37,99,235,0.08),var(--dark));}
-.pop-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:0.62rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.25rem 1rem;border-radius:50px;white-space:nowrap;}
-.pcard-name{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.8rem;}
-.pcard-price{font-family:'Syne',sans-serif;font-size:2.3rem;font-weight:800;margin-bottom:0.3rem;}
-.pcard-price span{font-size:0.9rem;color:var(--gray);font-weight:400;}
-.pcard-delivery{font-size:0.72rem;color:var(--cyan);margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.07);}
-.pcard-features{list-style:none;margin-bottom:2rem;}
-.pcard-features li{font-size:0.82rem;color:var(--light);padding:0.4rem 0;display:flex;align-items:flex-start;gap:0.5rem;line-height:1.4;}
-.pcard-features li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;}
-.pcard-btn{width:100%;padding:0.85rem;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.85rem;cursor:pointer;transition:all 0.3s;text-decoration:none;display:block;text-align:center;border-radius:4px;}
-.pcard.pop .pcard-btn{background:var(--blue);color:var(--white);border:none;}
-.pcard.pop .pcard-btn:hover{background:var(--blue2);}
-.pcard:not(.pop) .pcard-btn{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--white);}
-.pcard:not(.pop) .pcard-btn:hover{border-color:var(--blue);color:var(--blue);}
-/* OFFER NOTE */
-.offer-note{margin-top:2.5rem;text-align:center;background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(6,182,212,0.06));border:1px dashed rgba(37,99,235,0.4);padding:1.5rem 2rem;max-width:680px;margin-left:auto;margin-right:auto;border-radius:8px;}
-.offer-note-tag{font-size:0.65rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--blue);margin-bottom:0.5rem;}
-.offer-note-title{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;}
-.offer-note-desc{font-size:0.82rem;color:var(--gray);line-height:1.7;margin-bottom:1.2rem;}
-.offer-note-btn{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue);color:white;padding:0.65rem 1.5rem;font-size:0.8rem;font-weight:700;text-decoration:none;border-radius:4px;}
-
-/* WHY ME */
-#whyme{background:var(--dark);}
-.why-header{text-align:center;margin-bottom:2.5rem;}
-.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
-@media(min-width:768px){.why-grid{grid-template-columns:repeat(3,1fr);}}
-.why-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.06);padding:1.5rem;transition:all 0.3s;}
-.why-card:hover{border-color:rgba(37,99,235,0.3);transform:translateY(-3px);}
-.why-icon{font-size:1.8rem;margin-bottom:0.8rem;display:block;}
-.why-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:0.4rem;}
-.why-desc{font-size:0.76rem;color:var(--gray);line-height:1.6;}
-
-/* PORTFOLIO */
-#portfolio{background:var(--black);}
-.port-header{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;}
-.port-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;}
-@media(min-width:480px){.port-grid{grid-template-columns:repeat(2,1fr);}}
-@media(min-width:900px){.port-grid{grid-template-columns:repeat(3,1fr);}}
-.port-card{background:var(--dark);border:1px solid rgba(255,255,255,0.07);overflow:hidden;transition:all 0.3s;}
-.port-card:hover{border-color:rgba(37,99,235,0.4);transform:translateY(-4px);}
-.port-img{aspect-ratio:16/10;overflow:hidden;position:relative;}
-.port-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
-.port-card:hover .port-img img{transform:scale(1.05);}
-.port-cat{position:absolute;top:0.7rem;left:0.7rem;background:var(--blue);color:var(--white);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:3px;}
-.port-info{padding:1rem;}
-.port-name{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.3rem;}
-.port-type{font-size:0.7rem;color:var(--gray);margin-bottom:0.8rem;}
-.port-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--blue);font-size:0.76rem;font-weight:600;text-decoration:none;}
-.port-del{background:none;border:none;color:var(--gray);cursor:pointer;font-size:0.7rem;margin-left:1rem;display:none;}
-.admin-mode .port-del{display:inline;}
-.admin-trigger{display:block;text-align:center;margin-top:2rem;color:rgba(255,255,255,0.08);font-size:0.62rem;cursor:pointer;letter-spacing:0.2em;text-transform:uppercase;transition:color 0.3s;}
-.admin-trigger:hover{color:var(--gray);}
-
-/* PROCESS */
-#process{background:var(--dark);}
-.proc-header{text-align:center;margin-bottom:3rem;}
-.proc-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:900px;margin:0 auto;}
-@media(min-width:640px){.proc-grid{grid-template-columns:repeat(4,1fr);}}
-.proc-card{text-align:center;padding:1.5rem 1rem;}
-.proc-num{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:rgba(37,99,235,0.12);line-height:1;margin-bottom:0.5rem;}
-.proc-icon{font-size:2rem;margin-bottom:0.7rem;display:block;}
-.proc-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:0.4rem;}
-.proc-desc{font-size:0.76rem;color:var(--gray);line-height:1.6;}
-
-/* TESTIMONIALS */
-#testimonials{background:var(--black);overflow:hidden;padding-bottom:4rem;}
-.testi-header{text-align:center;margin-bottom:2.5rem;padding:0 1.5rem;}
-.testi-wrap{overflow:hidden;}
-.testi-track{display:flex;gap:1rem;animation:scrollL 30s linear infinite;}
-.testi-track:hover{animation-play-state:paused;}
-.testi-card{min-width:260px;background:var(--dark);border:1px solid rgba(255,255,255,0.07);border-top:2px solid var(--blue);padding:1.5rem;flex-shrink:0;}
-.testi-stars{color:var(--gold);font-size:0.82rem;margin-bottom:0.8rem;}
-.testi-text{font-size:0.8rem;color:var(--light);line-height:1.8;margin-bottom:1rem;font-style:italic;}
-.testi-name{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;}
-.testi-biz{font-size:0.68rem;color:var(--blue);}
-@keyframes scrollL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* FAQ */
-#faq{background:var(--dark);}
-.faq-header{text-align:center;margin-bottom:2.5rem;}
-.faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:0.8rem;}
-.faq-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);overflow:hidden;}
-.faq-item.open{border-color:rgba(37,99,235,0.3);}
-.faq-q{padding:1.1rem 1.4rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:1rem;}
-.faq-q span{font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:600;}
-.faq-icon{color:var(--blue);font-size:1.1rem;flex-shrink:0;transition:transform 0.3s;font-style:normal;}
-.faq-item.open .faq-icon{transform:rotate(45deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
-.faq-item.open .faq-a{max-height:200px;}
-.faq-a p{padding:0 1.4rem 1.1rem;font-size:0.8rem;color:var(--gray);line-height:1.8;}
-
-/* CTA */
-#cta{background:linear-gradient(135deg,rgba(37,99,235,0.12),rgba(6,182,212,0.06));border-top:1px solid rgba(37,99,235,0.2);border-bottom:1px solid rgba(37,99,235,0.2);}
-.cta-inner{text-align:center;max-width:650px;margin:0 auto;}
-.cta-inner h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:1rem;}
-.cta-inner p{color:var(--gray);font-size:0.88rem;line-height:1.8;margin-bottom:2.5rem;}
-.cta-wa{display:inline-flex;align-items:center;gap:0.7rem;background:#25d366;color:var(--white);padding:1rem 2.5rem;font-weight:700;font-size:0.95rem;text-decoration:none;border-radius:4px;animation:pulseWa 2s infinite;}
-.cta-wa:hover{background:#1ebe5a;}
-@keyframes pulseWa{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.4)}50%{box-shadow:0 0 0 12px rgba(37,211,102,0)}}
-.cta-note{font-size:0.73rem;color:var(--gray);margin-top:1.2rem;}
-.cta-note strong{color:var(--gold);}
-
-/* FOOTER */
-#contact{background:var(--black);border-top:1px solid rgba(255,255,255,0.06);}
-.contact-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;}
-@media(min-width:768px){.contact-grid{grid-template-columns:1.5fr 1fr 1fr;}}
-.brand-name{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:800;}
-.brand-name span{color:var(--blue);}
-.brand-desc{color:var(--gray);font-size:0.8rem;line-height:1.8;margin:0.8rem 0 1.5rem;}
-.clinks{display:flex;flex-direction:column;gap:0.7rem;}
-.clink{display:flex;align-items:center;gap:0.6rem;color:var(--gray);text-decoration:none;font-size:0.8rem;transition:color 0.3s;}
-.clink:hover{color:var(--white);}
-.clink-icon{width:30px;height:30px;background:var(--dark2);border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;border-radius:4px;transition:all 0.3s;}
-.clink:hover .clink-icon{background:var(--blue);border-color:var(--blue);}
-.col-title{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;color:var(--white);margin-bottom:1.2rem;}
-.flinks{list-style:none;display:flex;flex-direction:column;gap:0.55rem;}
-.flinks a{color:var(--gray);text-decoration:none;font-size:0.8rem;transition:color 0.3s;display:flex;align-items:center;gap:0.4rem;}
-.flinks a::before{content:'→';color:var(--blue);font-size:0.68rem;}
-.flinks a:hover{color:var(--blue);}
-.footer-gold-box{margin-top:1.5rem;padding:1rem;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.2);border-radius:4px;}
-.footer-gold-box p:first-child{font-size:0.72rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem;}
-.footer-gold-box p:last-child{font-size:0.7rem;color:var(--gray);}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);margin-top:3rem;padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.8rem;}
-.footer-bottom p{color:var(--gray);font-size:0.7rem;}
-.footer-tagline{color:var(--gold);font-size:0.7rem;font-weight:600;}
-
-/* FLOATING WA */
-.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;background:#25d366;color:white;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.4rem;z-index:800;box-shadow:0 4px 20px rgba(37,211,102,0.5);animation:pulseWa 2s infinite;}
-
-/* ADMIN */
-#adminModal{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:5000;display:none;align-items:center;justify-content:center;padding:1rem;}
-#adminModal.open{display:flex;}
-.admin-box{background:var(--dark);border:1px solid rgba(37,99,235,0.3);padding:2rem;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;border-radius:8px;}
-.admin-box h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;color:var(--blue);}
-.ainput{width:100%;background:var(--dark2);border:1px solid rgba(255,255,255,0.1);color:var(--white);padding:0.65rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.82rem;margin-bottom:0.8rem;border-radius:4px;}
-.ainput:focus{outline:none;border-color:var(--blue);}
-.ainput::placeholder{color:var(--gray);}
-.abtn{background:var(--blue);color:var(--white);border:none;padding:0.8rem 1.5rem;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.82rem;cursor:pointer;width:100%;margin-top:0.5rem;border-radius:4px;}
-.abtn:hover{background:var(--blue2);}
-.aclose{background:none;border:none;color:var(--gray);cursor:pointer;font-size:0.78rem;margin-top:1rem;width:100%;text-align:center;}
-.aproject{display:flex;align-items:center;justify-content:space-between;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.78rem;color:var(--light);gap:0.5rem;}
-.adel{background:none;border:1px solid rgba(239,68,68,0.3);color:#ef4444;padding:0.2rem 0.5rem;cursor:pointer;font-size:0.65rem;border-radius:3px;}
-.adel:hover{background:#ef4444;color:white;}
-
-/* TOAST */
-#toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--blue);color:var(--white);padding:0.7rem 1.5rem;font-weight:600;font-size:0.78rem;z-index:8000;opacity:0;transition:all 0.3s;white-space:nowrap;border-radius:4px;}
-#toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Manish Yadav — Professional Web Designer. Turn clicks into customers with our premium websites.">
+  <title>Manish Yadav — I Build Websites That Make You Money.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- OFFER BAR -->
-<div id="offerBar">
-  <p class="offer-text">💥 <strong>SPECIAL OFFERS ALWAYS GOING ON!</strong> Always ask us what's available today — you might be surprised 😉</p>
-  <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20to%20know%20about%20your%20current%20offers!" target="_blank" class="offer-btn">Ask Now →</a>
-  <button class="offer-close" onclick="document.getElementById('offerBar').style.display='none';document.getElementById('navbar').style.top='0'">✕</button>
-</div>
+  <!-- Custom Cursor -->
+  <div id="cursorGlow"></div>
+  <div class="default-cursor" id="dCursor"></div>
+  <div id="scrollProgress"></div>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-name">Manish <span>Yadav</span></div>
-  <div class="loader-sub">Premium Websites. Real Results.</div>
-  <div class="loader-bar"><div class="loader-fill"></div></div>
-</div>
-
-<!-- NAVBAR -->
-<nav id="navbar">
-  <a href="#" class="nav-logo">Manish <span>Yadav</span></a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#portfolio">Work</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20need%20a%20website%20for%20my%20business." target="_blank" class="nav-wa">💬 WhatsApp</a>
-  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-</nav>
-
-<!-- MOBILE MENU -->
-<div id="mobileMenu">
-  <button id="mobileClose">✕</button>
-  <a href="#services">Services</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#portfolio">Work</a>
-  <a href="#process">Process</a>
-  <a href="#contact">Contact</a>
-  <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20need%20a%20website." target="_blank" style="color:var(--blue)">💬 Get Your Website</a>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <canvas id="heroCanvas"></canvas>
-  <div class="hero-content">
-    <div class="hero-badge">🚀 Available for New Projects</div>
-    <h1 class="hero-title">
-      <span class="t1">We Build Websites</span>
-      <span class="t2">That Get You Customers</span>
-    </h1>
-    <p class="hero-sub">Starting from just <strong>₹2,999</strong> — Professional, Fast & 100% Mobile Friendly.<br>🎨 Free Logo Design with Every Package!</p>
-    <div class="hero-btns">
-      <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20need%20a%20website%20for%20my%20business." target="_blank" class="btn-blue">💬 Get Your Website</a>
-      <a href="#portfolio" class="btn-ghost">View Our Work →</a>
-    </div>
-    <div class="hero-stats">
-      <div><div class="hstat-num">50<span>+</span></div><div class="hstat-label">Websites Built</div></div>
-      <div><div class="hstat-num">3<span>days</span></div><div class="hstat-label">Avg Delivery</div></div>
-      <div><div class="hstat-num">100<span>%</span></div><div class="hstat-label">Happy Clients</div></div>
-    </div>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-txt">MANISH YADAV</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
   </div>
-</section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="svc-header fadein">
-      <p class="sec-eye">What I Build</p>
-      <h2 class="sec-title">Websites I Build <span>For You</span></h2>
-      <p class="sec-sub" style="max-width:500px;margin:0 auto;">Whatever your business — I build professional websites that attract customers and grow your brand.</p>
-    </div>
-    <div class="svc-grid" style="margin-top:2.5rem;">
-      <div class="svc-card fadein"><span class="svc-emoji">🍕</span><div class="svc-name">Restaurant & Food</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">💇</span><div class="svc-name">Salon & Beauty</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🏋️</span><div class="svc-name">Gym & Fitness</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">📸</span><div class="svc-name">Photography</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🎓</span><div class="svc-name">Coaching Classes</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🏥</span><div class="svc-name">Clinic & Doctor</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🏠</span><div class="svc-name">Real Estate</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🎂</span><div class="svc-name">Bakery & Cakes</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🛍️</span><div class="svc-name">Local Business</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">💼</span><div class="svc-name">Personal Portfolio</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🚗</span><div class="svc-name">Car Service</div><div class="svc-price">From ₹2,999</div></div>
-      <div class="svc-card fadein"><span class="svc-emoji">🎪</span><div class="svc-name">Event Management</div><div class="svc-price">From ₹2,999</div></div>
-    </div>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Manish<span>Yadav</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <a href="https://wa.me/918389981668" target="_blank" class="btn-glow nav-cta">Get Proposal</a>
+    <button class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#portfolio" class="mobile-link">Work</a>
+    <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="https://wa.me/918389981668" target="_blank" class="btn-glow mt-4">Message Me</a>
   </div>
-</section>
 
-<!-- PRICING -->
-<section id="pricing">
-  <div class="container">
-    <!-- LIMITED TIME OFFER BANNER -->
-    <div class="lto-banner fadein">
-      <div class="lto-inner">
-        <span class="lto-badge">🔥 Limited Time Offer</span>
-        <span class="lto-text">Prices Slashed! Was <span class="old">₹4,999</span> — Now just <span class="new">₹2,999</span> onwards!</span>
-        <span class="lto-timer">⏰ Offer valid for limited time only</span>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content reveal">
+      <div class="hero-badge">Available for Web Projects</div>
+      <h1 class="hero-title">I Build Websites That <br><span class="text-gradient">Make You Money</span></h1>
+      <p class="hero-sub">Stop losing customers to outdated designs. I create ultra-premium, high-converting portfolios and business websites that build instant trust and drive real leads.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20to%20build%20a%20premium%20website." class="magnetic-btn">Get Your Website</a>
+        <a href="#portfolio" class="btn-outline">View My Work</a>
       </div>
     </div>
-    <div class="price-header fadein" style="margin-top:2.5rem;">
-      <p class="sec-eye">Limited Time Pricing</p>
-      <h2 class="sec-title">Unbeatable <span>Packages</span></h2>
-      <p style="color:var(--gray);font-size:0.88rem;margin-top:0.5rem;">Grab these prices before they go back up! 🚀</p>
-    </div>
-    <p class="price-note fadein">🎨 <strong>Free Logo Design</strong> with every package &nbsp;•&nbsp; 🔧 Yearly maintenance from <strong>₹1,999/year</strong></p>
-    <div class="price-grid">
-      <div class="pcard fadein">
-        <div class="pcard-name">Basic</div>
-        <span class="pcard-old">Was ₹4,999</span>
-        <span class="pcard-savings">You Save ₹2,000 🎉</span>
-        <div class="pcard-price">₹2,999<span>/one time</span></div>
-        <div class="pcard-delivery">⚡ Delivered in 3 Days</div>
-        <ul class="pcard-features">
-          <li>3-4 Page Website</li>
-          <li>100% Mobile Friendly</li>
-          <li>WhatsApp Button</li>
-          <li>Contact Form</li>
-          <li>Free Logo Design</li>
-        </ul>
-        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Basic%20package%20at%20the%20offer%20price%20₹2999!" target="_blank" class="pcard-btn">Get Started →</a>
-      </div>
-      <div class="pcard pop fadein">
-        <div class="pop-tag">⭐ Most Popular</div>
-        <div class="pcard-name">Standard</div>
-        <span class="pcard-old">Was ₹7,999</span>
-        <span class="pcard-savings">You Save ₹3,000 🎉</span>
-        <div class="pcard-price">₹4,999<span>/one time</span></div>
-        <div class="pcard-delivery">⚡ Delivered in 5 Days</div>
-        <ul class="pcard-features">
-          <li>5-6 Page Website</li>
-          <li>Image Gallery</li>
-          <li>Google Maps</li>
-          <li>Social Media Links</li>
-          <li>Basic SEO Setup</li>
-          <li>WhatsApp & Contact</li>
-          <li>Free Logo Design</li>
-          <li>Mobile Responsive</li>
-        </ul>
-        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Standard%20package%20at%20the%20offer%20price%20₹4999!" target="_blank" class="pcard-btn">Get Started →</a>
-      </div>
-      <div class="pcard fadein">
-        <div class="pcard-name">Premium</div>
-        <span class="pcard-old">Was ₹12,999</span>
-        <span class="pcard-savings">You Save ₹5,000 🎉</span>
-        <div class="pcard-price">₹7,999<span>/one time</span></div>
-        <div class="pcard-delivery">⚡ Delivered in 7 Days</div>
-        <ul class="pcard-features">
-          <li>Full Custom Website</li>
-          <li>Animations & Effects</li>
-          <li>Image Gallery</li>
-          <li>Blog Section</li>
-          <li>Advanced SEO</li>
-          <li>Free Logo Design</li>
-          <li>Google Analytics</li>
-          <li>Speed Optimized</li>
-          <li>Priority Support</li>
-        </ul>
-        <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20the%20Premium%20package%20at%20the%20offer%20price%20₹7999!" target="_blank" class="pcard-btn">Get Started →</a>
-      </div>
-    </div>
-    <!-- OFFER NOTE -->
-    <div class="offer-note fadein">
-      <p class="offer-note-tag">⚠️ Important Note</p>
-      <p class="offer-note-title">💥 Special Offers Always Going On!</p>
-      <p class="offer-note-desc">Always ask us about our current offers before ordering — you might be surprised by what's available today! 😉</p>
-      <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20to%20know%20about%20your%20current%20offers!" target="_blank" class="offer-note-btn">💬 Ask About Offers</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- WHY ME -->
-<section id="whyme">
-  <div class="container">
-    <div class="why-header fadein">
-      <p class="sec-eye">Why Choose Me</p>
-      <h2 class="sec-title">Why Clients Choose <span>Manish Yadav</span></h2>
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <span class="sec-tag reveal">Expertise</span>
+      <h2 class="sec-title reveal">Everything your business <br><span class="text-gradient">needs to grow online</span></h2>
+      <p class="sec-desc reveal">From eye-catching landing pages to blazing fast business websites, I provide end-to-end frontend and UI/UX design solutions.</p>
+      
+      <div class="svc-grid reveal">
+        <div class="glass-card card-hover">
+          <div class="svc-icon">💻</div>
+          <div class="svc-title">Website Design</div>
+          <div class="svc-desc">Stunning, bespoke websites designed specifically for your brand identity and audience.</div>
+        </div>
+        <div class="glass-card card-hover">
+          <div class="svc-icon">🚀</div>
+          <div class="svc-title">Landing Pages</div>
+          <div class="svc-desc">High-converting single pages optimized perfectly for ads and lead generation.</div>
+        </div>
+        <div class="glass-card card-hover">
+          <div class="svc-icon">🏬</div>
+          <div class="svc-title">Business Websites</div>
+          <div class="svc-desc">Professional corporate sites that establish authority and outshine your local competitors.</div>
+        </div>
+        <div class="glass-card card-hover">
+          <div class="svc-icon">🎨</div>
+          <div class="svc-title">UI/UX Design</div>
+          <div class="svc-desc">Intuitive user journeys and friction-less interfaces that people actually love using.</div>
+        </div>
+        <div class="glass-card card-hover">
+          <div class="svc-icon">⚡</div>
+          <div class="svc-title">Speed Optimization</div>
+          <div class="svc-desc">Zero lag. I build lightweight, highly-optimized websites that load in milliseconds.</div>
+        </div>
+        <div class="glass-card card-hover">
+          <div class="svc-icon">🌐</div>
+          <div class="svc-title">Free Hosting Setup</div>
+          <div class="svc-desc">I handle the tricky technical parts. Fast, secure hosting configured for you at zero extra cost.</div>
+        </div>
+      </div>
     </div>
-    <div class="why-grid" style="margin-top:2.5rem;">
-      <div class="why-card fadein"><span class="why-icon">⚡</span><div class="why-title">Super Fast Delivery</div><div class="why-desc">Website ready in 3-7 days. No weeks of waiting. Your business goes live fast.</div></div>
-      <div class="why-card fadein"><span class="why-icon">📱</span><div class="why-title">100% Mobile Friendly</div><div class="why-desc">Perfect on every device — phone, tablet, desktop. Tested on all screen sizes.</div></div>
-      <div class="why-card fadein"><span class="why-icon">💰</span><div class="why-title">Unbeatable Price</div><div class="why-desc">Professional quality at the lowest price. Agencies charge ₹30,000+ for same work.</div></div>
-      <div class="why-card fadein"><span class="why-icon">🎨</span><div class="why-title">Free Logo Design</div><div class="why-desc">Don't have a logo? No problem. We design your professional logo at no extra cost.</div></div>
-      <div class="why-card fadein"><span class="why-icon">🔧</span><div class="why-title">Lifetime Support</div><div class="why-desc">Always available on WhatsApp. Any issue, any time — just a message away.</div></div>
-      <div class="why-card fadein"><span class="why-icon">📈</span><div class="why-title">SEO Optimized</div><div class="why-desc">Built to rank on Google. Your customers will find you when they search online.</div></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="container">
-    <div class="port-header fadein">
+  <!-- Why Better -->
+  <section id="compare" style="background: rgba(10,10,12,0.5);">
+    <div class="container">
+      <span class="sec-tag reveal">The Difference</span>
+      <h2 class="sec-title reveal">Why My Websites Are <br><span class="text-gradient">Better Than Others</span></h2>
+      <p class="sec-desc reveal">Agencies charge massive fees for slow templates. I build unique, high-performance assets.</p>
+
+      <div class="compare-grid reveal">
+        <div class="col-bad">
+          <div class="comp-title">Average Freelancers / Agencies</div>
+          <ul class="comp-list">
+            <li>Use cheap, heavy WordPress templates</li>
+            <li>Slow loading times (3s+)</li>
+            <li>Basic design that looks like everyone else</li>
+            <li>Hidden fees for hosting and edits</li>
+            <li>Not optimized for mobile conversions</li>
+          </ul>
+        </div>
+        <div class="col-good">
+          <div class="comp-title">Working with Manish</div>
+          <ul class="comp-list">
+            <li>Custom, ultra-premium code & design</li>
+            <li>Blazing fast loading (under 1s)</li>
+            <li>Modern animations and glassmorphism</li>
+            <li>Transparent pricing + Free Hosting setup</li>
+            <li>Mobile-first design for maximum ROI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <span class="sec-tag reveal">Selected Work</span>
+      <h2 class="sec-title reveal">Premium <span class="text-gradient">Projects</span></h2>
+      <p class="sec-desc reveal">Clean, text-based showcases of high-performance websites currently live.</p>
+
+      <div class="port-grid reveal" id="portGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="container">
+      <span class="sec-tag reveal">Investment</span>
+      <h2 class="sec-title reveal">Transparent <span class="text-gradient">Pricing</span></h2>
+      <p class="sec-desc reveal">No hidden fees. Premium web solutions that actually deliver a return on your investment.</p>
+
+      <div class="pricing-grid reveal">
+        <!-- Basic -->
+        <div class="price-card">
+          <div class="lim-offer">Limited Time Offer</div>
+          <div class="p-name">Basic Package</div>
+          <div class="p-old">₹4999</div>
+          <div class="p-new">₹3599 <span>/one_time</span></div>
+          <ul class="p-list">
+            <li>3-4 Page Professional Website</li>
+            <li>Mobile-responsive structure</li>
+            <li>Contact Form & WhatsApp Integration</li>
+            <li class="highlight">Free Hosting Included</li>
+            <li class="highlight">Free Logo Included</li>
+            <li>Delivery Guarantee (3 Days)</li>
+          </ul>
+          <a href="https://wa.me/918389981668?text=I%20want%20the%20Basic%20Package" class="p-btn">Start Project</a>
+        </div>
+
+        <!-- Standard -->
+        <div class="price-card pop">
+          <div class="lim-offer">Most Popular</div>
+          <div class="p-name">Standard Package</div>
+          <div class="p-old">₹7999</div>
+          <div class="p-new">₹4999 <span>/one_time</span></div>
+          <ul class="p-list">
+            <li>5-6 Page Custom Website</li>
+            <li>Smooth Scroll & Micro-animations</li>
+            <li>SEO Base Setup</li>
+            <li class="highlight">Free Hosting Included</li>
+            <li class="highlight">Free Logo Included</li>
+            <li class="highlight">No Hidden Charges</li>
+            <li>Delivery Guarantee (5 Days)</li>
+          </ul>
+          <a href="https://wa.me/918389981668?text=I%20want%20the%20Standard%20Package" class="p-btn">Start Project</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="price-card">
+          <div class="lim-offer">Only 2 Slots Left</div>
+          <div class="p-name">Premium Flow</div>
+          <div class="p-old">₹12999</div>
+          <div class="p-new">₹7999 <span>/one_time</span></div>
+          <ul class="p-list">
+            <li>Full Custom Multi-page Architecture</li>
+            <li>Advanced GSAP/Scroll Animations</li>
+            <li>Complete SEO & Analytics</li>
+            <li>Dark Mode / Theme Switches</li>
+            <li class="highlight">Free Hosting + Setup</li>
+            <li class="highlight">Priority 24/7 Support</li>
+            <li>Delivery Guarantee (7 Days)</li>
+          </ul>
+          <a href="https://wa.me/918389981668?text=I%20want%20the%20Premium%20Package" class="p-btn">Start Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" style="background: rgba(10,10,12,0.5);">
+    <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <span class="sec-tag reveal">Trust</span>
+      <h2 class="sec-title reveal">What Clients Say</h2>
+      
+      <div class="glass-card reveal" style="margin-top: 3rem; text-align: left;">
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #ddd; font-style: italic; margin-bottom: 2rem;">"Manish completely transformed my business's online presence. The new website looks like it was built by a high-end agency charging lakhes. It loads instantly and we've seen a 40% increase in WhatsApp leads within the first week."</p>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="width: 50px; height: 50px; background: var(--cyan); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: 800; font-family: 'Syne';">U</div>
+          <div>
+            <div style="font-weight: 700; color: #fff;">Uday Thakur</div>
+            <div style="font-size: 0.8rem; color: var(--cyan);">Founder, Uday Classes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="f-grid reveal">
       <div>
-        <p class="sec-eye">Recent Work</p>
-        <h2 class="sec-title">Our <span>Latest Projects</span></h2>
-      </div>
-    </div>
-    <div class="port-grid" id="portGrid"></div>
-    <span class="admin-trigger" onclick="openAdmin()">admin</span>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-  <div class="container">
-    <div class="proc-header fadein">
-      <p class="sec-eye">How It Works</p>
-      <h2 class="sec-title">Simple <span>4-Step Process</span></h2>
-    </div>
-    <div class="proc-grid">
-      <div class="proc-card fadein"><div class="proc-num">01</div><span class="proc-icon">💬</span><div class="proc-title">You Contact Me</div><div class="proc-desc">Tell me about your business, what you need and your budget.</div></div>
-      <div class="proc-card fadein"><div class="proc-num">02</div><span class="proc-icon">🎨</span><div class="proc-title">I Design It</div><div class="proc-desc">Using years of expertise and creativity I craft your stunning professional website.</div></div>
-      <div class="proc-card fadein"><div class="proc-num">03</div><span class="proc-icon">✅</span><div class="proc-title">You Approve</div><div class="proc-desc">Review your website. Request any changes. We refine until it's perfect.</div></div>
-      <div class="proc-card fadein"><div class="proc-num">04</div><span class="proc-icon">🚀</span><div class="proc-title">Goes Live</div><div class="proc-desc">Your website goes live. Customers start finding your business on Google.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="testi-header fadein">
-    <p class="sec-eye">Client Reviews</p>
-    <h2 class="sec-title">What Clients <span>Say</span></h2>
-  </div>
-  <div class="testi-wrap">
-    <div class="testi-track">
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Manish built my salon website in just 3 days. Customers now find me on Google and WhatsApp me directly. Business has increased by 40%!"</p><div class="testi-name">Priya Sharma</div><div class="testi-biz">Glamour Salon, Delhi</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Amazing work at such an affordable price. My restaurant website looks better than restaurants charging 10x more. Highly recommended!"</p><div class="testi-name">Rahul Agarwal</div><div class="testi-biz">Spice Garden Restaurant, Mumbai</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"The free logo design alone was worth it. Manish understood exactly what I needed and delivered beyond expectations!"</p><div class="testi-name">Sneha Kapoor</div><div class="testi-biz">SnapShot Photography, Bangalore</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"My coaching centre website is getting enquiries daily now. Parents find us on Google and call directly. Best investment!"</p><div class="testi-name">Vikram Singh</div><div class="testi-biz">Excellence Coaching, Pune</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Professional, fast and very affordable. Manish is always available on WhatsApp for any changes. Lifetime support is the best part!"</p><div class="testi-name">Anita Mehta</div><div class="testi-biz">Anita's Bakery, Hyderabad</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Manish built my salon website in just 3 days. Customers now find me on Google and WhatsApp me directly. Business has increased by 40%!"</p><div class="testi-name">Priya Sharma</div><div class="testi-biz">Glamour Salon, Delhi</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Amazing work at such an affordable price. My restaurant website looks better than restaurants charging 10x more. Highly recommended!"</p><div class="testi-name">Rahul Agarwal</div><div class="testi-biz">Spice Garden Restaurant, Mumbai</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"The free logo design alone was worth it. Manish understood exactly what I needed and delivered beyond expectations!"</p><div class="testi-name">Sneha Kapoor</div><div class="testi-biz">SnapShot Photography, Bangalore</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"My coaching centre website is getting enquiries daily now. Parents find us on Google and call directly. Best investment!"</p><div class="testi-name">Vikram Singh</div><div class="testi-biz">Excellence Coaching, Pune</div></div>
-      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Professional, fast and very affordable. Manish is always available on WhatsApp for any changes. Lifetime support is the best part!"</p><div class="testi-name">Anita Mehta</div><div class="testi-biz">Anita's Bakery, Hyderabad</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
-    <div class="faq-header fadein">
-      <p class="sec-eye">FAQ</p>
-      <h2 class="sec-title">Common <span>Questions</span></h2>
-    </div>
-    <div class="faq-list fadein">
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How long does it take to build my website?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>Basic websites (₹2,999) are delivered in 3 days, Standard (₹4,999) in 5 days and Premium (₹7,999) in 7 days. Once you share your business details, I get started immediately.</p></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What if I don't have a logo?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>No problem! Free logo design is included with every package. Just tell me your business name — I'll design a professional logo at zero extra cost.</p></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Will my website work on mobile phones?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>Absolutely! Every website I build is 100% mobile responsive and tested on all screen sizes. Mobile optimization is my top priority.</p></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Can I update my website later?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>Yes! Small updates like changing phone numbers or prices are done free. I'm always available on WhatsApp — just message me anytime.</p></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What do I need to provide you?</span><i class="faq-icon">+</i></div><div class="faq-a"><p>Just your business name, what you do, contact details and any photos. If you don't have photos, I'll use professional stock images. That's all!</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section id="cta">
-  <div class="container">
-    <div class="cta-inner fadein">
-      <h2>Ready to Get Your <span style="color:var(--blue)">Website?</span></h2>
-      <p>Join 50+ happy business owners who trusted Manish Yadav. Professional quality, fast delivery, unbeatable price!</p>
-      <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20need%20a%20website%20for%20my%20business.%20Please%20contact%20me." target="_blank" class="cta-wa">💬 I Need A Website</a>
-      <p class="cta-note">🎨 <strong>Free Logo Design</strong> &nbsp;•&nbsp; ⚡ 3-7 Day Delivery &nbsp;•&nbsp; 🔧 Lifetime Support</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="fadein">
-        <div class="brand-name">Manish <span>Yadav</span></div>
-        <div class="blue-line"></div>
-        <p class="brand-desc">Professional web designer helping small businesses grow online. Affordable, fast and beautiful websites that get you real customers.</p>
-        <div class="clinks">
-          <a href="https://wa.me/918389981668" target="_blank" class="clink"><span class="clink-icon">💬</span>+91 83899 81668 (WhatsApp)</a>
-          <a href="https://www.instagram.com/codecanvasagency20/" target="_blank" class="clink"><span class="clink-icon">📸</span>@codecanvasagency20</a>
-          <a href="mailto:manishyadavroy201010@gmail.com" class="clink"><span class="clink-icon">✉️</span>manishyadavroy201010@gmail.com</a>
+        <div class="f-title" id="footLogo">Manish<span style="color:var(--cyan)">Yadav</span></div>
+        <p class="f-desc">Premium frontend engineering & UI/UX design. I build high-converting, unforgettable digital experiences for ambitious brands.</p>
+        <div class="f-contacts">
+          <a href="https://wa.me/918389981668">📞 +91 83899 81668</a>
+          <a href="mailto:manishyadavroy201010@gmail.com">✉️ manishyadavroy201010@gmail.com</a>
+          <a href="https://www.instagram.com/codecanvasagency20/">📸 @codecanvasagency20</a>
         </div>
       </div>
-      <div class="fadein">
-        <div class="col-title">Quick Links</div>
-        <ul class="flinks">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#portfolio">Our Work</a></li>
-          <li><a href="#process">How It Works</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="fadein">
-        <div class="col-title">Websites I Build</div>
-        <ul class="flinks">
-          <li><a href="#services">Restaurant & Food</a></li>
-          <li><a href="#services">Salon & Beauty</a></li>
-          <li><a href="#services">Gym & Fitness</a></li>
-          <li><a href="#services">Photography</a></li>
-          <li><a href="#services">Coaching Classes</a></li>
-          <li><a href="#services">& Many More...</a></li>
-        </ul>
-        <div class="footer-gold-box">
-          <p>🎨 FREE LOGO DESIGN</p>
-          <p>Don't have a logo? We build it free with every package!</p>
+      
+      <div>
+        <div class="f-heading">Navigation</div>
+        <div class="f-links">
+          <a href="#services">Services</a>
+          <a href="#compare">Why Me</a>
+          <a href="#portfolio">Work</a>
+          <a href="#pricing">Pricing</a>
         </div>
       </div>
+
+      <div>
+        <div class="f-heading">Start a Project</div>
+        <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.6;">Ready to build something awesome? Let's discuss your project today.</p>
+        <a href="https://wa.me/918389981668" class="btn-glow" style="padding: 0.8rem 2rem;">Message Me</a>
+      </div>
     </div>
-    <div class="footer-bottom">
+    
+    <div class="f-bottom reveal">
       <p>© 2025 Manish Yadav. All Rights Reserved.</p>
-      <span class="footer-tagline">Premium Websites. Real Results.</span>
+      <p style="color: var(--cyan); font-weight: 600;">System Architectured Design.</p>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- FLOATING WA -->
-<a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20need%20a%20website." target="_blank" class="wa-float">💬</a>
+  <a href="https://wa.me/918389981668" class="wa-float">💬</a>
 
-<!-- TOAST -->
-<div id="toast"></div>
-
-<!-- ADMIN MODAL -->
-<div id="adminModal">
-  <div class="admin-box">
-    <h3>🔐 Admin Panel</h3>
-    <div id="adminPassDiv">
-      <p style="font-size:0.78rem;color:var(--gray);margin-bottom:1rem;">Enter password to manage portfolio.</p>
-      <input type="password" class="ainput" id="adminPass" placeholder="Password..." onkeydown="if(event.key==='Enter')checkPass()">
-      <button class="abtn" onclick="checkPass()">Unlock</button>
-    </div>
-    <div id="adminContent" style="display:none;">
-      <input type="text" class="ainput" id="aName" placeholder="Website Name (e.g. Sharma Salon)">
-      <input type="text" class="ainput" id="aCat" placeholder="Category (e.g. Salon, Gym, Restaurant)">
-      <input type="text" class="ainput" id="aImg" placeholder="Image URL (Unsplash or GitHub raw URL)">
-      <input type="text" class="ainput" id="aUrl" placeholder="Live Demo URL (https://...)">
-      <button class="abtn" onclick="addProject()">+ Add Project</button>
-      <div id="adminList" style="margin-top:1.2rem;border-top:1px solid rgba(255,255,255,0.07);padding-top:1rem;"></div>
-    </div>
-    <button class="aclose" onclick="closeAdmin()">✕ Close</button>
-  </div>
-</div>
-
-<script>
-// LOADER - hide after 2.5s no matter what
-(function(){
-  var l=document.getElementById('loader');
-  function hide(){if(l)l.classList.add('gone');}
-  setTimeout(hide,2500);
-  document.addEventListener('DOMContentLoaded',function(){setTimeout(hide,1500);});
-})();
-
-// NAVBAR
-var navbar=document.getElementById('navbar');
-var lastY=0;
-window.addEventListener('scroll',function(){
-  var y=window.scrollY;
-  if(y>50)navbar.classList.add('scrolled');else navbar.classList.remove('scrolled');
-  if(y>lastY&&y>200)navbar.classList.add('hidden');else navbar.classList.remove('hidden');
-  lastY=y;
-});
-
-// HAMBURGER
-document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('mobileMenu').classList.add('open');});
-document.getElementById('mobileClose').addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});
-document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});});
-
-// FADE IN - show all immediately then animate
-document.querySelectorAll('.fadein').forEach(function(el){
-  el.classList.add('show'); // show everything immediately
-});
-// Then use intersection observer for nice animation on future scrolls
-if('IntersectionObserver' in window){
-  document.querySelectorAll('.fadein').forEach(function(el){
-    el.classList.remove('show');
-  });
-  var obs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting)e.target.classList.add('show');
-    });
-  },{threshold:0.05});
-  document.querySelectorAll('.fadein').forEach(function(el){obs.observe(el);});
-}
-
-// FAQ
-function toggleFaq(el){
-  var item=el.parentElement;
-  var isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
-  if(!isOpen)item.classList.add('open');
-}
-
-// TOAST
-function showToast(msg){
-  var t=document.getElementById('toast');
-  t.textContent=msg;t.classList.add('show');
-  setTimeout(function(){t.classList.remove('show');},2800);
-}
-
-// PARTICLES
-var canvas=document.getElementById('heroCanvas');
-var ctx=canvas.getContext('2d');
-function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
-resize();
-window.addEventListener('resize',resize);
-var particles=[];
-for(var i=0;i<60;i++){
-  particles.push({
-    x:Math.random()*window.innerWidth,
-    y:Math.random()*window.innerHeight,
-    s:Math.random()*1.5+0.3,
-    vx:(Math.random()-0.5)*0.3,
-    vy:-Math.random()*0.4-0.1,
-    o:Math.random()*0.4+0.1,
-    c:Math.random()>0.5?'37,99,235':'6,182,212'
-  });
-}
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach(function(p){
-    p.x+=p.vx;p.y+=p.vy;
-    if(p.y<-5){p.y=canvas.height;p.x=Math.random()*canvas.width;}
-    ctx.beginPath();ctx.arc(p.x,p.y,p.s,0,Math.PI*2);
-    ctx.fillStyle='rgba('+p.c+','+p.o+')';ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-animate();
-
-// PORTFOLIO
-var DEFAULT=[
-  {id:1,name:'Glamour Salon',cat:'Salon',img:'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80',url:'#'},
-  {id:2,name:'IronForge Gym',cat:'Gym',img:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',url:'#'},
-  {id:3,name:'Spice Garden Restaurant',cat:'Restaurant',img:'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80',url:'#'}
-];
-function getProjects(){
-  try{var s=localStorage.getItem('my_portfolio');return s?JSON.parse(s):DEFAULT;}
-  catch(e){return DEFAULT;}
-}
-function saveProjects(p){
-  try{localStorage.setItem('my_portfolio',JSON.stringify(p));}catch(e){}
-}
-function renderPortfolio(){
-  var ps=getProjects();
-  var g=document.getElementById('portGrid');
-  if(!ps.length){g.innerHTML='<p style="color:var(--gray);grid-column:1/-1;text-align:center;padding:2rem;">No projects yet. Add from admin panel!</p>';return;}
-  g.innerHTML=ps.map(function(p){return '<div class="port-card"><div class="port-img"><img src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.src=\'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80\'"><span class="port-cat">'+p.cat+'</span></div><div class="port-info"><div class="port-name">'+p.name+'</div><div class="port-type">'+p.cat+' Website</div><a href="'+p.url+'" target="_blank" class="port-link">View Live Demo →</a><button class="port-del" onclick="delProject('+p.id+')">✕ Remove</button></div></div>';}).join('');
-}
-function delProject(id){
-  saveProjects(getProjects().filter(function(p){return p.id!==id;}));
-  renderPortfolio();renderAdminList();showToast('Removed!');
-}
-
-// ADMIN
-function openAdmin(){document.getElementById('adminModal').classList.add('open');}
-function closeAdmin(){document.getElementById('adminModal').classList.remove('open');document.getElementById('adminPass').value='';}
-document.getElementById('adminModal').addEventListener('click',function(e){if(e.target===this)closeAdmin();});
-function checkPass(){
-  if(document.getElementById('adminPass').value==='manish2025'){
-    document.getElementById('adminPassDiv').style.display='none';
-    document.getElementById('adminContent').style.display='block';
-    document.body.classList.add('admin-mode');
-    renderAdminList();showToast('Admin unlocked!');
-  }else{showToast('Wrong password!');document.getElementById('adminPass').value='';}
-}
-function addProject(){
-  var n=document.getElementById('aName').value.trim();
-  var c=document.getElementById('aCat').value.trim();
-  var i=document.getElementById('aImg').value.trim();
-  var u=document.getElementById('aUrl').value.trim();
-  if(!n||!c){showToast('Name & category required!');return;}
-  var ps=getProjects();
-  ps.push({id:Date.now(),name:n,cat:c,img:i||'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',url:u||'#'});
-  saveProjects(ps);renderPortfolio();renderAdminList();
-  document.getElementById('aName').value='';document.getElementById('aCat').value='';
-  document.getElementById('aImg').value='';document.getElementById('aUrl').value='';
-  showToast('✅ Project added!');
-}
-function renderAdminList(){
-  var ps=getProjects();
-  var l=document.getElementById('adminList');
-  if(!ps.length){l.innerHTML='<p style="font-size:0.75rem;color:var(--gray);">No projects yet.</p>';return;}
-  l.innerHTML='<p style="font-size:0.7rem;color:var(--gray);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.1em;">Existing Projects</p>'+
-    ps.map(function(p){return '<div class="aproject"><span>'+p.name+' ('+p.cat+')</span><button class="adel" onclick="delProject('+p.id+')">Delete</button></div>';}).join('');
-}
-renderPortfolio();
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
