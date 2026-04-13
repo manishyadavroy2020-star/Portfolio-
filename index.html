@@ -3,8 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="description" content="Manish Yadav — Professional Web Designer. Turn clicks into customers with our premium websites.">
-  <title>Manish Yadav — I Build Websites That Make You Money.</title>
+  <meta name="google-site-verification" content="_pPIVVKz0jFNvjXA4sGhSW9S70Rhc0ooDq4EkOqqk4M" />
+  
+  <!-- Primary SEO -->
+  <title>Manish Yadav — Premium Web Design & Development India | High-Converting Websites</title>
+  <meta name="description" content="Award-winning freelance web designer in India. Manish Yadav builds ultra-premium, high-converting websites that drive daily sales. Pan-India services with 24h delivery.">
+  <meta name="keywords" content="Web Design India, Freelance Web Developer, High Converting Websites, Premium Portfolio Design, Manish Yadav Web, Business Website India, eCommerce Website Developer India">
+  <link rel="canonical" href="https://manishroy.pages.dev/">
+
+  <!-- Social Media (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://manishroy.pages.dev/">
+  <meta property="og:title" content="Manish Yadav — I Build Websites That Make You Money.">
+  <meta property="og:description" content="Stop losing customers to outdated designs. Get an ultra-premium website designed for maximum ROI and daily sales.">
+  <meta property="og:image" content="https://manishroy.pages.dev/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://manishroy.pages.dev/">
+  <meta property="twitter:title" content="Manish Yadav — Premium Web Design India">
+  <meta property="twitter:description" content="Pan-India web design services focused on high conversion and extreme speed. Built by Manish Yadav.">
+  <meta property="twitter:image" content="https://manishroy.pages.dev/assets/og-image.jpg">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Manish Yadav Web Design",
+    "image": "https://manishroy.pages.dev/assets/logo.png",
+    "@id": "https://manishroy.pages.dev/",
+    "url": "https://manishroy.pages.dev/",
+    "telephone": "+918389981668",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pan India Services",
+      "addressLocality": "India",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 20.5937,
+      "longitude": 78.9629
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.instagram.com/codecanvasagency20/"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -30,10 +94,13 @@
       <li><a href="#portfolio">Work</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
-    <a href="https://wa.me/918389981668" target="_blank" class="btn-glow nav-cta">Get Proposal</a>
-    <button class="menu-btn" id="menuBtn">
-      <span></span><span></span><span></span>
-    </button>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <button id="themeToggle" class="btn-text" style="font-size: 1.2rem; padding: 0.5rem;" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode">🌙</button>
+      <a href="https://wa.me/918389981668" target="_blank" class="btn-glow nav-cta">Get Proposal</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open Mobile Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- Mobile Menu -->
@@ -41,6 +108,7 @@
     <a href="#services" class="mobile-link">Services</a>
     <a href="#portfolio" class="mobile-link">Work</a>
     <a href="#pricing" class="mobile-link">Pricing</a>
+    <button id="mobileThemeToggle" class="btn-glow" style="margin-top: 1rem; padding: 0.8rem 2rem;" onclick="toggleTheme()">Switch Theme 🌙</button>
     <a href="https://wa.me/918389981668" target="_blank" class="btn-glow mt-4">Message Me</a>
   </div>
 
@@ -101,7 +169,7 @@
   </section>
 
   <!-- Why Better -->
-  <section id="compare" style="background: rgba(10,10,12,0.5);">
+  <section id="compare" style="background: var(--section-alt);">
     <div class="container">
       <span class="sec-tag reveal">The Difference</span>
       <h2 class="sec-title reveal">Why My Websites Are <br><span class="text-gradient">Better Than Others</span></h2>
@@ -210,17 +278,17 @@
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" style="background: rgba(10,10,12,0.5);">
+  <section id="testimonials" style="background: var(--section-alt);">
     <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
       <span class="sec-tag reveal">Trust</span>
       <h2 class="sec-title reveal">What Clients Say</h2>
       
       <div class="glass-card reveal" style="margin-top: 3rem; text-align: left;">
-        <p style="font-size: 1.1rem; line-height: 1.8; color: #ddd; font-style: italic; margin-bottom: 2rem;">"Manish completely transformed my business's online presence. The new website looks like it was built by a high-end agency charging lakhes. It loads instantly and we've seen a 40% increase in WhatsApp leads within the first week."</p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text); font-style: italic; margin-bottom: 2rem;">"Manish completely transformed my business's online presence. The new website looks like it was built by a high-end agency charging lakhes. It loads instantly and we've seen a 40% increase in WhatsApp leads within the first week."</p>
         <div style="display: flex; align-items: center; gap: 1rem;">
           <div style="width: 50px; height: 50px; background: var(--cyan); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: 800; font-family: 'Syne';">U</div>
           <div>
-            <div style="font-weight: 700; color: #fff;">Uday Thakur</div>
+            <div style="font-weight: 700; color: var(--text);">Uday Thakur</div>
             <div style="font-size: 0.8rem; color: var(--cyan);">Founder, Uday Classes</div>
           </div>
         </div>
@@ -248,6 +316,7 @@
           <a href="#compare">Why Me</a>
           <a href="#portfolio">Work</a>
           <a href="#pricing">Pricing</a>
+          <a href="javascript:void(0)" onclick="openAdminModal()" style="opacity: 0.1;">Admin</a>
         </div>
       </div>
 
@@ -264,7 +333,52 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/918389981668" class="wa-float">💬</a>
+  <a href="https://wa.me/918389981668" class="wa-float" aria-label="Chat with Manish on WhatsApp">💬</a>
+
+  <!-- Admin Login Modal -->
+  <div id="adminModal" class="dashboard-modal">
+    <div class="glass-card">
+      <h3 class="syne" style="margin-bottom: 1rem;">Admin Access</h3>
+      <input type="password" id="adminPass" placeholder="Enter Password" class="dash-input">
+      <div style="display:flex; gap: 0.5rem; margin-top: 1.5rem;">
+        <button onclick="checkAdmin()" class="btn-glow" style="flex:1;">Unlock</button>
+        <button onclick="closeAdminModal()" class="btn-outline">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard -->
+  <div id="adminDashboard" class="dashboard-panel">
+    <div class="dash-header">
+      <h2 class="syne">Portfolio <span class="text-gradient">Manager</span></h2>
+      <button onclick="closeDashboard()" class="btn-outline">Close</button>
+    </div>
+    <div class="dash-content">
+      <div class="glass-card">
+        <h4 class="syne" style="margin-bottom: 1.5rem;">Add New Project</h4>
+        <div class="form-group">
+          <label>Project Name</label>
+          <input type="text" id="pName" placeholder="e.g. Madhumobile" class="dash-input">
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <input type="text" id="pCat" placeholder="e.g. E-Commerce" class="dash-input">
+        </div>
+        <div class="form-group">
+          <label>URL</label>
+          <input type="text" id="pUrl" placeholder="https://..." class="dash-input">
+        </div>
+        <button id="addWorkBtn" onclick="submitNewWork()" class="btn-glow" style="width: 100%; margin-top: 1rem;">Add To Portfolio</button>
+      </div>
+      
+      <div class="glass-card" style="margin-top: 2rem;">
+        <h4 class="syne" style="margin-bottom: 1rem;">Live Projects</h4>
+        <div id="liveProjectList" class="dash-list">
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Loading live projects...</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

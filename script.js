@@ -109,21 +109,65 @@ if (!isTouch) {
   });
 }
 
-// 6. Portfolio Logistics (Text Cards Only)
-const PORTFOLIO_PROJECTS = [
-  { name: "Madhumobile", cat: "E-Commerce / Business", url: "https://madhumobile.pages.dev" },
-  { name: "Uday Classes", cat: "Education Platform", url: "https://udayclasses.pages.dev" },
-  { name: "Car Demo", cat: "Automotive Service", url: "https://car-demo-sigma.vercel.app/" },
-  { name: "Gheewala", cat: "Premium UI/UX", url: "https://gheewala.pages.dev" }
-];
+// 6. Google Sheets Integration & Dashboard Logic
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzx8mQCwjk55DZYfRLKP584Xi-cC160igeiB_voPdlLhOFOVGS6oktu8hgBNjTLzEgN/exec';
+let PORTFOLIO_PROJECTS = [];
+
+// SHA-256-like Obfuscation (Works even on file:// urls)
+const AUTH_CODE = "bWFuaXNoMTIz"; // This is 'manish123' obfuscated
+
+function openAdminModal() { 
+  document.getElementById('adminModal').classList.add('open'); 
+  document.getElementById('adminPass').focus();
+}
+function closeAdminModal() { document.getElementById('adminModal').classList.remove('open'); }
+
+async function checkAdmin() {
+  const passInput = document.getElementById('adminPass');
+  // Obfuscate the input for comparison
+  const encodedInput = btoa(passInput.value);
+  
+  if(encodedInput === AUTH_CODE) {
+    closeAdminModal();
+    openDashboard();
+    sessionStorage.setItem('admin_session', passInput.value); 
+    passInput.value = '';
+  } else {
+    alert("Unauthorized: Access Denied.");
+    passInput.value = '';
+  }
+}
+
+function openDashboard() {
+  document.getElementById('adminDashboard').classList.add('open');
+  renderLiveList();
+}
+function closeDashboard() { document.getElementById('adminDashboard').classList.remove('open'); }
+
+async function fetchProjects() {
+  try {
+    const response = await fetch(SCRIPT_URL);
+    const data = await response.json();
+    PORTFOLIO_PROJECTS = data;
+    renderPortfolio();
+    if(document.getElementById('adminDashboard').classList.contains('open')) renderLiveList();
+  } catch (err) {
+    console.error("Connectivity issue:", err);
+  }
+}
 
 function renderPortfolio() {
   const grid = document.getElementById('portGrid');
   if(!grid) return;
 
+  if (PORTFOLIO_PROJECTS.length === 0) {
+    grid.innerHTML = '<p style="text-align:center; grid-column: 1/-1; color: var(--text-muted);">No projects found.</p>';
+    return;
+  }
+
   grid.innerHTML = PORTFOLIO_PROJECTS.map(p => `
     <div class="port-card card-hover">
-      <div class="port-cat">${p.cat}</div>
+      <div class="port-cat">${p.category || p.cat || 'Web Project'}</div>
       <div class="port-name">${p.name}</div>
       <a href="${p.url}" target="_blank" class="port-link">View Live Demo ↗️</a>
     </div>
@@ -140,5 +184,83 @@ function renderPortfolio() {
   }
 }
 
-// Initial render
-renderPortfolio();
+function renderLiveList() {
+  const list = document.getElementById('liveProjectList');
+  if(!list) return;
+  list.innerHTML = PORTFOLIO_PROJECTS.map(p => `
+    <div class="dash-item">
+      <div>
+        <div style="font-weight: 700; font-size: 0.9rem;">${p.name}</div>
+        <div style="font-size: 0.75rem; color: var(--text-muted);">${p.category || p.cat}</div>
+      </div>
+      <a href="${p.url}" target="_blank" style="font-size: 0.7rem; color: var(--cyan);">View ↗</a>
+    </div>
+  `).join('');
+}
+
+async function submitNewWork() {
+  const name = document.getElementById('pName').value;
+  const cat = document.getElementById('pCat').value;
+  const url = document.getElementById('pUrl').value;
+  const btn = document.getElementById('addWorkBtn');
+  const password = sessionStorage.getItem('admin_session');
+
+  if(!name || !cat || !url) { alert("Fields cannot be empty"); return; }
+  if(!password) { alert("Session expired. Please re-login."); return; }
+
+  btn.innerText = "Encrypting & Sending...";
+  btn.disabled = true;
+
+  try {
+    const response = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify({ name, cat, url, password }) // Send password for server-side verification
+    });
+    
+    const result = await response.json();
+    if(result.status === 'success') {
+      alert("Project published successfully!");
+      document.getElementById('pName').value = '';
+      document.getElementById('pCat').value = '';
+      document.getElementById('pUrl').value = '';
+      fetchProjects();
+    } else {
+      alert("Error: " + result.message);
+    }
+  } catch (err) {
+    alert("Connection failed. Check your internet.");
+  } finally {
+    btn.innerText = "Add To Portfolio";
+    btn.disabled = false;
+  }
+}
+
+// 7. Theme Toggle Logic
+function toggleTheme() {
+  const isLight = document.body.classList.toggle('light-theme');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  updateThemeUI(isLight);
+}
+
+function updateThemeUI(isLight) {
+  const btn = document.getElementById('themeToggle');
+  const mBtn = document.getElementById('mobileThemeToggle');
+  if(btn) btn.innerText = isLight ? '☀️' : '🌙';
+  if(mBtn) mBtn.innerText = isLight ? 'Switch Theme ☀️' : 'Switch Theme 🌙';
+}
+
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  
+  if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+    document.body.classList.add('light-theme');
+    updateThemeUI(true);
+  } else {
+    updateThemeUI(false);
+  }
+}
+
+// Initial fetch & Theme init
+initTheme();
+fetchProjects();
