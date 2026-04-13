@@ -49,17 +49,18 @@
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "00:00",
       "closes": "23:59"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Design Services India",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Premium Web Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Page Optimization" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Website Development" } }
+      ]
     },
     "sameAs": [
       "https://www.instagram.com/codecanvasagency20/"
@@ -69,6 +70,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -117,8 +119,8 @@
     <div class="hero-bg"></div>
     <div class="hero-content reveal">
       <div class="hero-badge">Available for Web Projects</div>
-      <h1 class="hero-title">I Build Websites That <br><span class="text-gradient">Make You Money</span></h1>
-      <p class="hero-sub">Stop losing customers to outdated designs. I create ultra-premium, high-converting portfolios and business websites that build instant trust and drive real leads.</p>
+      <h1 class="hero-title">High-Converting <br><span class="text-gradient">Websites in India</span></h1>
+      <p class="hero-sub">Rank #1 and grow your business with ultra-premium, high-speed portfolios designed by Manish Yadav. We turn clicks into loyal customers across Pan India.</p>
       <div class="hero-btns">
         <a href="https://wa.me/918389981668?text=Hi%20Manish!%20I%20want%20to%20build%20a%20premium%20website." class="magnetic-btn">Get Your Website</a>
         <a href="#portfolio" class="btn-outline">View My Work</a>
