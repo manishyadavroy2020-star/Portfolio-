@@ -1,6 +1,22 @@
+# Robots.txt for manishroy.pages.dev
+# Manish Roy — Premium Web Designer & Developer India
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Crawl-delay: 1
+
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /dashboard
 
+# Sitemap location
 Sitemap: https://manishroy.pages.dev/sitemap.xml
